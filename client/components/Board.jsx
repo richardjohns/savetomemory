@@ -3,33 +3,17 @@ import React from 'react'
 import Cell from './Cell'
 
 // This might need to be turned into a stateful component (aka container)
-const Board = () => (
+const Board = () => {
+return(
   <div className='boardcontainer'>
-
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-    <div className="cell"><Cell /></div>
-
-
-
-
+    {props.cells.map(cell => <Cell details={cell} />)}
   </div>
 )
 
-export default Board
+function mapStateToProps (state) {
+  return {
+    cells: state.cells
+  }
+}
+
+export default connect(mapStateToProps)(Board)
