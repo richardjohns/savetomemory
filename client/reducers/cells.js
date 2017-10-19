@@ -1,10 +1,6 @@
-export default function cells(state = [], action) {
+export default function clickedCells (state = [], action) {
   switch (action.type){
-    case 'ISCHOISEN':
-    return
+    case 'CLICK_CELL':
+    return [...state, action.cell]
   }
 }
-
-issolvewd
-img front
-img back
