@@ -7,7 +7,7 @@ import {clickCell} from '../actions/cells'
 const Board = (props) => {
   console.log(props)
 
-  function handleClick (cell) {
+  function handleClick (cells) {
     if (cell.isSolved) {
       return
     } else if (cell.isTemp) {
@@ -21,7 +21,7 @@ const Board = (props) => {
   }
   return (
     <div className='boardcontainer'>
-      {props.cells.map(cell => <Cell handleClick={handleClick} details={cell} />)}
+      {props.cells.map(cell => <Cell handleClick={handleClick} cells={props.cells} details={cell} />)}
     </div>
   )
 }

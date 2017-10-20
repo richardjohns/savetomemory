@@ -5,7 +5,7 @@ const Cell = (props) => {
   const sand = '/images/back.jpg'
   const image = props.details.isTemp ? props.details.img : sand
   return (
-    <div className='cell'onClick={() => props.handleClick(props.details)}>
+    <div className='cell'onClick={() => props.handleClick(props.cells)}>
 
       <img src={image} />
 
