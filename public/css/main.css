@@ -10,13 +10,14 @@ h1 {
 .boardcontainer {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
+  width: 408px;
 }
 
 .cell {
   width: 100px;
   height: 100px;
   background-color: gray;
+  border: 1px solid black;
 }
 
 .welcome {
