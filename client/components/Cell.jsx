@@ -7,7 +7,6 @@ const Cell = (props) => {
   return (
     <div className='cell'onClick={() => props.handleClick(props.details)}>
 
-      {/* <img src={props.details.img}/> */}
       <img src={image} />
 
     </div>

@@ -8,6 +8,15 @@ const Board = (props) => {
   console.log(props)
 
   function handleClick (cell) {
+    if (cell.isSolved) {
+      return
+    } else if (cell.isTemp) {
+      return
+    } else if (cell.img === cell.img) {
+      props.dispatch(setToSolve(cell1, cell2))
+    } else{
+      props.dispatch(flipBack(cell1, cell2))
+    }
     props.dispatch(clickCell(cell))
   }
   return (
