@@ -1,12 +1,12 @@
-import beerData from '../../data/cells'
+import cellData from '../../data/cells'
 
-const initialState = beerData.beers
+const initialState = cellData.cells
 
-const beers = (state = initialState, action) => {
+function cells (state = initialState, action) {
   switch (action.type) {
     default:
       return state
   }
 }
 
-export default beers
+export default cells

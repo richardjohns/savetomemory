@@ -1,13 +1,15 @@
 import React from 'react'
 
 // This might need to be turned into a stateful component (aka container)
-const Cell = () => (
-  <div className=''>
+const Cell = (props) => {
+  return (
+  <div className='cell'>
 
-    <div></div>
+    <img src={props.details.img}/>
 
     </div>
 
 )
+}
 
 export default Cell
