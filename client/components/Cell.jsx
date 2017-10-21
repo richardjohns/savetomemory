@@ -1,15 +1,19 @@
 import React from 'react'
 
-// This might need to be turned into a stateful component (aka container)
-const Cell = (props) => {
+// Once you've created a container with mapState or mapDispatch to props, can export them directly into props
+export default function Cell ({cell, click, temp, solved, timeout}) {
+  console.log({cell, click})
+  const sand = "/images/back.jpg";
+  const onclick = () => click(cell)
+  const image = cell.img
   return (
-  <div className='cell'>
+  <div className='cell' onClick={onclick}>
 
-    <img src={props.details.img}/>
+    <img src={image}/>
 
-    </div>
+  </div>
 
 )
 }
 
-export default Cell
+// container
